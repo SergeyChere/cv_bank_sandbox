@@ -1,23 +1,18 @@
 package com.cvbank.application.controller;
 
-import com.cvbank.application.DTO.RegistrationRequestHunter;
-import com.cvbank.application.DTO.RegistrationRequestSeeker;
+import com.cvbank.application.DTO.implement.RegistrationHeadHunterImpl;
+import com.cvbank.application.DTO.implement.RegistrationJobSeekerImpl;
 import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 @RequestMapping("/registration")
-public class RegistrationController {
+public interface RegistrationController {
 
     @PostMapping
-    public void RegistrationSeeker(@RequestBody RegistrationRequestSeeker request){
-
-    }
+    void RegistrationSeeker(RegistrationJobSeekerImpl request);
 
     @PostMapping
-    public void RegistrationHunter(@RequestBody RegistrationRequestHunter request){
-
-    }
+    void RegistrationHunter(RegistrationHeadHunterImpl request);
 }

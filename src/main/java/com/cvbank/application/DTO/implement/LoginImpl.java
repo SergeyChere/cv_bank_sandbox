@@ -1,4 +1,4 @@
-package com.cvbank.application.DTO;
+package com.cvbank.application.DTO.implement;
 
 import lombok.*;
 
@@ -7,10 +7,9 @@ import lombok.*;
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder
-public class LoginRequest {
+public class LoginImpl implements com.cvbank.application.DTO.Login {
 
     private String login;
     private String password;
-    private String confirmPassword;
 
 }
